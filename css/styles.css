@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: #ffffcc;
+  background-color: #fffb94;
 }
 
 p {
@@ -33,7 +33,13 @@ p {
   padding-top: 15pt;
 }
 
+#description, #temperature, #humidity {
+  font-size: 130%;
+  text-align: center;
+}
+
 img {
-  float: right;
-  margin-right: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
