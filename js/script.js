@@ -29,7 +29,7 @@ const getWeather = async (URLAddress) => {
     const tempK = jsonData.main.feels_like
     const tempC = tempK - 273.15
     document.getElementById("icon-weather").innerHTML =
-      '<img src="http://openweathermap.org/img/wn/' +
+      '<img src="https://openweathermap.org/img/wn/' +
       jsonData.weather[0].icon +
       '@2x.png" alt="icon" height="300" width="300">'
     document.getElementById("description").innerHTML =
