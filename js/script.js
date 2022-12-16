@@ -28,13 +28,21 @@ const getWeather = async (URLAddress) => {
     const tempCelsius = tempKelvin - 273.15
     const tempK = jsonData.main.feels_like
     const tempC = tempK - 273.15
-    document.getElementById("icon-weather").innerHTML = '<img src="http://openweathermap.org/img/wn/' + jsonData.weather[0].icon + '@2x.png" alt="icon" height="300" width="300">'
-    document.getElementById("description").innerHTML = jsonData.weather[0].main + ", " + jsonData.weather[0].description
-    document.getElementById("temperature").innerHTML = Math.round(tempCelsius) + "°C feels like " + Math.round(tempC) + "°C"
-    document.getElementById("humidity").innerHTML = "humidity: " + jsonData.main.humidity + "%"
+    document.getElementById("icon-weather").innerHTML =
+      '<img src="http://openweathermap.org/img/wn/' +
+      jsonData.weather[0].icon +
+      '@2x.png" alt="icon" height="300" width="300">'
+    document.getElementById("description").innerHTML =
+      jsonData.weather[0].main + ", " + jsonData.weather[0].description
+    document.getElementById("temperature").innerHTML =
+      Math.round(tempCelsius) + "°C feels like " + Math.round(tempC) + "°C"
+    document.getElementById("humidity").innerHTML =
+      "humidity: " + jsonData.main.humidity + "%"
   } catch (err) {
     console.log(err)
   }
 }
 
-getWeather("https://api.openweathermap.org/data/2.5/weather?lat=45.4211435&lon=-75.6900574&appid=fe1d80e1e103cff8c6afd190cad23fa5")
+getWeather(
+  "https://api.openweathermap.org/data/2.5/weather?lat=45.4211435&lon=-75.6900574&appid=fe1d80e1e103cff8c6afd190cad23fa5"
+)

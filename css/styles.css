@@ -33,7 +33,9 @@ p {
   padding-top: 15pt;
 }
 
-#description, #temperature, #humidity {
+#description,
+#temperature,
+#humidity {
   font-size: 130%;
   text-align: center;
 }
